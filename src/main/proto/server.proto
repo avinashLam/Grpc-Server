@@ -1,19 +1,19 @@
 
 syntax = "proto3";
 
-package stocktrading;
+package stovk;
 option  java_multiple_files=true;
-option java_package="com.javatechie.grpc";
-option  java_outer_classname="StockTradingProto";
+option java_package="com.java.grpc";
+option  java_outer_classname="Stock";
 
 
 service StockTradingService{
 
-  // UNARY - RPC -> get current stock price
+  // UNARY -
   rpc getStockPrice(StockRequest) returns (StockResponse);
 
   //server streaming
-
+rpc getStreamStockprice(StockRequest) returns (stream StockResponse);
 }
 
 
